@@ -20,7 +20,6 @@ function fetchData(urlApi, callback) {
       if (xhttp.status === 200) {
         // el estado 200 es que la peticion fue exitosa
         callback(null, JSON.parse(xhttp.responseText)); // el primer parametro es el error, el segundo es la respuesta la cual se parsea a JSON porque viene en formato string y se necesita que sea un objeto
-        console.log('xhttp.responseText', xhttp.responseText);
       } else {
         const error = new Error('Error ' + urlApi); // se crea un nuevo error con el mensaje de error y la url de la peticion
         return callback(error, null); // se regresa el error y la respuesta es null
