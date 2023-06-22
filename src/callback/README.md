@@ -1,3 +1,24 @@
+# Ejecutar el proyecto o scripts usando la terminal de comandos
+Existen dos formas de ejecutar el script de este proyecto:
+1. Ejecutar el script usando el comando `node` y el nombre del archivo a ejecutar, por ejemplo:
+```bash
+node src/callback/challenge.js
+```
+
+2. Ejecutar el script usando el comando `npm` y el nombre del script definido en el archivo `package.json`, por ejemplo:
+```bash
+npm run callback
+```
+
+Para esto, en el archivo `package.json` se debe definir el script a ejecutar, por ejemplo:
+```json
+{
+  "scripts": {
+    "callback": "node src/callback/challenge.js"
+  }
+}
+```
+
 # Callbacks
 
 ## Qué son los callbacks
@@ -63,3 +84,6 @@ XMLHttpRequest es un objeto de JS que permite hacer peticiones hacia servicios e
 - **PUT:** se usa para actualizar por completo los datos del servidor.
 - **PATCH:** se usa para actualizar parcialmente los datos del servidor.
 - **DELETE:** se usa para eliminar datos del servidor.
+
+### Callback Hell
+Consiste en múltiples Callbacks anidados que provocan que el código se vuelva difícil de leer y ‘debuggear’ y por eso se debe evitar. Para evitar la mala práctica de un Call Hell, no es recomendable exceder de 3 callback, para ello se utilizan las promesas o el Async Away.
