@@ -32,3 +32,23 @@ Una Promesa puede estar en uno de los siguientes estados:
 - `fulfilled` (cumplida) → Significa que la operación se completó satisfactoriamente, `.then((result) => { … })`. Cuando llamamos a `resolve` entonces la promesa pasa a estar resuelta. Cuando una promesa se resuelve entonces se ejecuta la función que pasamos al método `.then()`.
 
 - `rejected` (rechazada) → significa que la operación falló, `.catch((error) => { … })`. Si llamamos a `reject` pasa a estar rechazada la promesa (obtenemos un error que nos va a indicar la razón del rechazo). Si la promesa es rechazada entonces se ejecuta la función que pasamos a `.catch()`.
+
+## Fetch
+Por medio de Fetch se puede realizar peticiones HTTP asíncronas de JavaScript (JS) con promesas, tales como peticiones y respuestas. La API Fetch también provee un método global `fetch()` que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red.
+
+Este tipo de funcionalidad se conseguía previamente haciendo uso de `XMLHttpRequest`. Fetch proporciona una alternativa mejor que puede ser empleada fácilmente por otras tecnologías como Service Workers (en-US). Fetch también aporta un único lugar lógico en el que definir otros conceptos relacionados con HTTP como CORS y extensiones para HTTP.
+
+### Uso de fetch desde la consola
+Para poder usar fetch, primero tenemos que instalarlo:
+- Ir a la terminal e instalar fetch con: `npm i node-fetch`
+- Para poder compilar desde VSC, debemos registrar el modulo en package.json, abrimos el archivo y al final se agrega:
+
+```json
+"type": "module"
+```
+
+- Luego, importar fetch en el archivo que se va a usar:
+
+```js
+import fetch from 'node-fetch';
+```
