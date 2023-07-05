@@ -2,7 +2,7 @@
 Existen dos formas de ejecutar el script de este proyecto:
 1. Ejecutar el script usando el comando `node` y el nombre del archivo a ejecutar, por ejemplo:
 ```bash
-node src/callback/challenge.js
+node src/callback/challenge.cjs
 ```
 
 2. Ejecutar el script usando el comando `npm` y el nombre del script definido en el archivo `package.json`, por ejemplo:
@@ -18,6 +18,8 @@ Para esto, en el archivo `package.json` se debe definir el script a ejecutar, po
   }
 }
 ```
+
+> **Nota:** Es necesario que la extensión del archivo sea `.cjs` para que se pueda ejecutar con el comando `node` y que sea `.js` para que se pueda ejecutar con el comando `npm`, ya que en el archivo `package.json` se define que el `type` del proyecto es `module` y por lo tanto solo se pueden ejecutar archivos con extensión `.mjs` o `.js`.
 
 # Callbacks
 
