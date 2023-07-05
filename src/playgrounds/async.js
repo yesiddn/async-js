@@ -16,6 +16,8 @@ await runCode();
 Output:
 Error: API Not Found
 ```
+
+Más información sobre throw: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
 */
 
 export async function runCode() {
